@@ -19,7 +19,7 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Nome do cliente ou mesa (opcional, mas legal para o CRUD)
+
     private String nomeCliente;
 
     @Enumerated(EnumType.STRING)
@@ -29,7 +29,7 @@ public class Pedido {
     @Column(updatable = false)
     private LocalDateTime dataCriacao;
 
-    // Relacionamento: Um pedido contém uma lista de produtos
+
     @ManyToMany
     @JoinTable(
             name = "tb_pedido_produtos",
